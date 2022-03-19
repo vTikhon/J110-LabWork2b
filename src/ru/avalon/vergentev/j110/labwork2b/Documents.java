@@ -17,7 +17,7 @@ public class Documents extends FileParameters {
     @Override
     public void print() {
         super.print();
-        System.out.println(getListNumbers() + " pages");
+        System.out.print(getListNumbers() + " pages");
     }
 
     //Setters and Getters
@@ -26,7 +26,7 @@ public class Documents extends FileParameters {
     }
 
     public void setListNumbers(int listNumbers) {
-        if (listNumbers < 3) {
+        if (listNumbers < 2) {
             throw new IllegalArgumentException("Quantity of pages must be more than three");
         }
         this.listNumbers = listNumbers;
