@@ -14,6 +14,11 @@ public class Images extends FileParameters {
 
 
     //Methods
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(getwidthImage() + "x" + getheightImage());
+    }
 
 
     //Setters and Getters

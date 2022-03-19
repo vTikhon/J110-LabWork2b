@@ -16,6 +16,16 @@ public class FileParameters {
 
 
     //Methods
+    public void print () {
+        System.out.println(getFileName() + "." + getFormat() + "     " + getFileSize() + "     " + ", ");
+    }
+
+    public static void printAll (FileParameters [] files) {
+        for (int i = 0; i < files.length; i++) {
+            files[i].print();
+        }
+    }
+
 
 
     //Setters and Getters

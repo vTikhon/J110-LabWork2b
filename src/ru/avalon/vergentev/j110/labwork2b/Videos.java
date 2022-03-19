@@ -1,28 +1,40 @@
 package ru.avalon.vergentev.j110.labwork2b;
 
 public class Videos extends Multimedias {
-    private double mediaSize;
+    private int mediaWidth;
+    private int mediaHeight;
 
 
     //Constructors
-    public Videos(String fileName, int fileSize, String format, String description, double mediaSize) {
-        super(fileName, fileSize, format, description);
-        setMediaSize(mediaSize);
+    public Videos(String fileName, int fileSize, String format, String description, double time, int mediaWidth, int mediaHeight) {
+        super(fileName, fileSize, format, description, time);
+        setMediaWidth(mediaWidth);
+        setMediaHeight(mediaHeight);
     }
 
 
     //Methods
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(getTime() + ", " + getMediaWidth() + "x" + getMediaHeight());
+    }
 
 
     //Setters and Getters
-    public double getMediaSize() {
-        return mediaSize;
+    public int getMediaWidth() {
+        return mediaWidth;
     }
 
-    public void setMediaSize(double mediaSize) {
-        if (mediaSize < 0) {
-            throw new IllegalArgumentException("Media size must be more than zero");
-        }
-        this.mediaSize = mediaSize;
+    public void setMediaWidth(int mediaWidth) {
+        this.mediaWidth = mediaWidth;
+    }
+
+    public int getMediaHeight() {
+        return mediaHeight;
+    }
+
+    public void setMediaHeight(int mediaHeight) {
+        this.mediaHeight = mediaHeight;
     }
 }

@@ -14,7 +14,11 @@ public class Documents extends FileParameters {
 
 
     //Methods
-
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(getListNumbers() + " pages");
+    }
 
     //Setters and Getters
     public int getListNumbers() {
