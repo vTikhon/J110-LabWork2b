@@ -14,7 +14,7 @@ public class Videos extends Multimedias {
 
 
     //Methods
-//    @Override
+    @Override
     public void print() {
         super.print();
         System.out.print(", " + getWidthMedia() + "x" + getHeightMedia());
