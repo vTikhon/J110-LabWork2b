@@ -1,10 +1,14 @@
 package ru.avalon.vergentev.j110.labwork2b;
 
 public class Videos extends Multimedias {
-    double mediaSize;
+    private double mediaSize;
 
 
     //Constructors
+    public Videos(String fileName, int fileSize, String format, String description, double mediaSize) {
+        super(fileName, fileSize, format, description);
+        setMediaSize(mediaSize);
+    }
 
 
     //Methods

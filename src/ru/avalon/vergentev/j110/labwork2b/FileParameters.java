@@ -1,13 +1,18 @@
 package ru.avalon.vergentev.j110.labwork2b;
 
 public class FileParameters {
-    String fileName;
-    int fileSize;
-    String format;
+    private String fileName;
+    private int fileSize;
+    private String format;
 
 
 
     //Constructors
+    public FileParameters(String fileName, int fileSize, String format) {
+        setFileName(fileName);
+        setFileSize(fileSize);
+        setFormat(format);
+    }
 
 
     //Methods

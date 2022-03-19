@@ -1,11 +1,16 @@
 package ru.avalon.vergentev.j110.labwork2b;
 
 public class Images extends FileParameters {
-    double widthImage, heightImage;
+    private double widthImage, heightImage;
 
 
 
     //Constructors
+    public Images(String fileName, int fileSize, String format, double widthImage, double heightImage) {
+        super(fileName, fileSize, format);
+        setwidthImage(widthImage);
+        setheightImage(heightImage);
+    }
 
 
     //Methods
