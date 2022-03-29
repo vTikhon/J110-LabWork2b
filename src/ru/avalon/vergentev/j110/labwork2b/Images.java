@@ -1,12 +1,12 @@
 package ru.avalon.vergentev.j110.labwork2b;
 
 public class Images extends FileParameters {
-    private double widthImage, heightImage;
+    private int widthImage, heightImage;
 
 
 
     //Constructors
-    public Images(String fileName, int fileSize, String format, double widthImage, double heightImage) {
+    public Images(String fileName, int fileSize, String format, int widthImage, int heightImage) {
         super(fileName, fileSize, format);
         setwidthImage(widthImage);
         setheightImage(heightImage);
@@ -17,27 +17,27 @@ public class Images extends FileParameters {
     @Override
     public void print() {
         super.print();
-        System.out.println(getwidthImage() + "x" + getheightImage());
+        System.out.print(getheightImage() + "x" + getwidthImage());
     }
 
 
     //Setters and Getters
-    public double getwidthImage() {
+    public int getwidthImage() {
         return widthImage;
     }
 
-    public void setwidthImage(double widthImage) {
+    public void setwidthImage(int widthImage) {
         if (widthImage < 0) {
             throw new IllegalArgumentException("widthImage must be more than zero");
         }
         this.widthImage = widthImage;
     }
 
-    public double getheightImage() {
+    public int getheightImage() {
         return heightImage;
     }
 
-    public void setheightImage(double heightImage) {
+    public void setheightImage(int heightImage) {
         if (heightImage < 0) {
             throw new IllegalArgumentException("heightImage must be more than zero");
         }

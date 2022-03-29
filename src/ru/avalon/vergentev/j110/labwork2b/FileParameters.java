@@ -17,7 +17,8 @@ public class FileParameters {
 
     //Methods
     public void print () {
-        System.out.println(getFileName() + "." + getFormat() + "     " + getFileSize() + "     " + ", ");
+        System.out.println('\n');
+        System.out.print(getFileName() + "     " + getFileSize() + "     " + getFormat() + ", ");
     }
 
     public static void printAll (FileParameters [] files) {
